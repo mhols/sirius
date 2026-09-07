@@ -13,7 +13,18 @@ def run1():
     #plt.show()
     N.stokes
 
+    for o in N.kwargs['ORDERS']:
+        I = N.stokes.true_order_number==o
+
+        plt.plot(N.stokes.lambdagrid[I], N.stokes.intensity[I])
+
+    plt.show()
+
+
 
 if __name__ == '__main__':
+
+    print (nx.store.keys)
+
     run1()
 
